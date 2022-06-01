@@ -31,6 +31,25 @@
 			</div>
 		</div>
 
+		<hr>
+
+		<div class="text-center text-muted">
+			<div>
+				Made with
+				<i class="fa-solid fa-heart text-danger"></i>
+				and
+				<i class="fa-solid fa-code text-warning"></i>
+				by
+				<a href="https://www.andrearufo.it" class="text-muted">Andrea Rufo</a>
+			</div>
+			<div>
+				<a href="https://github.com/andrearufo/todox" class="text-muted">
+					<i class="fa-brands fa-github"></i>
+					https://github.com/andrearufo/todox
+				</a>
+			</div>
+		</div>
+
 	</div>
 </template>
 

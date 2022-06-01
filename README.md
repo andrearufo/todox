@@ -1,29 +1,20 @@
 # todox
 
-This template should help get you started developing with Vue 3 in Vite.
+Super simple todo list system made with Vue3 and some others libraries just for test... but the result was great!
 
-## Recommended IDE Setup
+## Insallation
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+Download the repository files and use your Terminal:
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
+```
+yarn install
+yarn dev
 ```
 
-### Compile and Hot-Reload for Development
+For more info consult the Vue official documentation.
 
-```sh
-npm run dev
-```
+## Credits
 
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
+- Animation realized by https://github.com/formkit/auto-animate/stargazers
+- Storage managed by https://github.com/vueuse/vueuse
+- Style made by https://github.com/twbs/bootstrap
