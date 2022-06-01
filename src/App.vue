@@ -18,13 +18,13 @@
 
 		<TodoList />
 
-		<div class="row">
-			<div class="col">
+		<div class="row g-2">
+			<div class="col-lg">
 
 				<TodoForm/>
 
 			</div>
-			<div class="col-auto">
+			<div class="col-lg-auto">
 
 				<TodoUtility/>
 				

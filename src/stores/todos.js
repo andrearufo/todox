@@ -1,31 +1,11 @@
+import { useStorage } from '@vueuse/core'
 import { defineStore } from 'pinia'
 
 export const useTodosStore = defineStore({
     id: 'todos',
 
     state: () => ({
-        list: [
-            {
-                body: 'Lorem ipsum',
-                is_complete: false
-            },
-            {
-                body: 'Dolem esset',
-                is_complete: true
-            },
-            {
-                body: 'Quam esseat',
-                is_complete: true
-            },
-            {
-                body: 'Non videri',
-                is_complete: false
-            },
-            {
-                body: 'In fabula',
-                is_complete: true
-            }
-        ]
+        list: useStorage('list', [ ])
     }),
 
     getters: {
@@ -68,6 +48,11 @@ export const useTodosStore = defineStore({
         cleanTodos(){
             if( confirm('Are you sure?') )
                 this.list = this.list.filter( (item) => !item.is_complete );
+        },
+
+        resetTodos(){
+            if( confirm('Are you sure?') )
+                this.list = [];
         }
     }
 })

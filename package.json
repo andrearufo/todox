@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@formkit/auto-animate": "^1.0.0-beta.1",
+    "@vueuse/core": "^8.6.0",
     "pinia": "^2.0.13",
     "vue": "^3.2.33"
   },
