@@ -18,7 +18,18 @@
 
 		<TodoList />
 
-		<TodoForm/>
+		<div class="row">
+			<div class="col">
+
+				<TodoForm/>
+
+			</div>
+			<div class="col-auto">
+
+				<TodoUtility/>
+				
+			</div>
+		</div>
 
 	</div>
 </template>
@@ -27,6 +38,7 @@
 import TodoCounter from '@/components/TodoCounter.vue';
 import TodoList from '@/components/TodoList.vue';
 import TodoForm from '@/components/TodoForm.vue';
+import TodoUtility from '@/components/TodoUtility.vue';
 
 import { useTodosStore } from '@/stores/todos';
 const todos = useTodosStore();

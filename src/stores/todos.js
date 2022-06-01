@@ -12,6 +12,18 @@ export const useTodosStore = defineStore({
             {
                 body: 'Dolem esset',
                 is_complete: true
+            },
+            {
+                body: 'Quam esseat',
+                is_complete: true
+            },
+            {
+                body: 'Non videri',
+                is_complete: false
+            },
+            {
+                body: 'In fabula',
+                is_complete: true
             }
         ]
     }),
@@ -31,32 +43,31 @@ export const useTodosStore = defineStore({
         },
 
         removeTodo(index) {
-            return this.list.splice(index, 1);
+            if( confirm('Are you sure?') )
+                this.list.splice(index, 1);
         },
 
         moveUp(index){
-            this.moveTodo(index, index - 1);
+            if(index > 0){
+                [ this.list[index-1], this.list[index] ] = [ this.list[index], this.list[index - 1] ]
+            }
         },
 
         moveDown(index){
-            this.moveTodo(index, index + 1);
+            if(index < this.list.length){
+                [ this.list[index], this.list[index+1] ] = [ this.list[index+1], this.list[index] ]
+            }
         },
 
-        moveTodo(old_index, new_index) {
-            while (old_index < 0) {
-                old_index += this.list.length;
-            }
-            while (new_index < 0) {
-                new_index += this.list.length;
-            }
-            if (new_index >= this.list.length) {
-                var k = new_index - this.list.length + 1;
-                while (k--) {
-                    this.list.push(undefined);
-                }
-            }
-            this.list.splice(new_index, 0, this.list.splice(old_index, 1)[0]);
-            // return this.list; // for testing purposes
+        sortTodos(){
+            this.list.sort( (a,b) => {
+                return a.body < b.body ? -1 : 1;
+            });
+        },
+
+        cleanTodos(){
+            if( confirm('Are you sure?') )
+                this.list = this.list.filter( (item) => !item.is_complete );
         }
     }
 })
