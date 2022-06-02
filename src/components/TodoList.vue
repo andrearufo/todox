@@ -1,10 +1,10 @@
 <template>
-	<div v-if="todos.total > 0" class="my-5">
+	<div v-if="todos.total > 0">
 		<ul class="list-group" v-auto-animate>
-			<li 
-			v-for="item, index in todos.list" 
+			<li
+			v-for="item, index in todos.list"
 			:key="item"
-			class="list-group-item" 
+			class="list-group-item"
 			:class="{
 				'bg-light': item.is_complete
 			}"
@@ -12,7 +12,7 @@
 
 				<div class="row align-items-center">
 					<div class="col">
-						
+
 						<div class="form-check">
 							<input class="form-check-input"  type="checkbox" :id="'todo-'+index" v-model="item.is_complete">
 							<label class="form-check-label w-100" :for="'todo-'+index">
@@ -22,7 +22,7 @@
 
 					</div>
 					<div class="col-auto text-end">
-						
+
 						<div class="btn-group" role="group" aria-label="Todo actions">
 							<button class="btn btn-sm btn-outline-secondary" type="button" @click="todos.moveUp(index)" :disabled="index == 0">
 								<i class="fa-solid fa-fw fa-angle-up"></i>
@@ -37,7 +37,7 @@
 
 					</div>
 				</div>
-			
+
 			</li>
 		</ul>
 	</div>

@@ -1,2 +1,16 @@
+$primary: #0a3d62;
+
 @import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css';
 @import 'bootstrap';
+
+$footer-height: 120px;
+
+main{
+    min-height: calc( 100vh - $footer-height );
+}
+
+.footer{
+    min-height: $footer-height;
+    display: flex;
+    align-items: center;
+}

@@ -1,39 +1,46 @@
 <template>
-	<div class="container py-5">
+    <main class="py-5">
+        <div class="container">
 
-		<!-- <img src="@/assets/logo.svg" /> -->
-		
-		<div class="row align-items-center">
-			<div class="col">
-				
-				<h1>Todox</h1>
+            <!-- <img src="@/assets/logo.svg" /> -->
 
-			</div>
-			<div class="col-auto">
-				
-				<TodoCounter />
+            <div class="row align-items-center">
+                <div class="col">
 
-			</div>
-		</div>
+                    <h1>Todox</h1>
 
-		<TodoList />
+                </div>
+                <div class="col-auto">
 
-		<div class="row g-2">
-			<div class="col-lg">
+                    <TodoCounter />
 
-				<TodoForm/>
+                </div>
+            </div>
 
-			</div>
-			<div class="col-lg-auto">
+            <TodoList />
 
-				<TodoUtility/>
-				
-			</div>
-		</div>
+        </div>
+    </main>
 
-		<hr>
+    <section class="footer sticky-bottom bg-light border-top">
+        <div class="container">
 
-		<div class="text-center text-muted">
+            <div class="row g-2">
+                <div class="col-lg">
+
+                    <TodoForm/>
+                </div>
+                <div class="col-lg-auto">
+
+                    <TodoUtility/>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+		<!-- <div class="text-center text-muted">
 			<div>
 				Made with
 				<i class="fa-solid fa-heart text-danger"></i>
@@ -48,9 +55,8 @@
 					https://github.com/andrearufo/todox
 				</a>
 			</div>
-		</div>
+		</div> -->
 
-	</div>
 </template>
 
 <script setup>
