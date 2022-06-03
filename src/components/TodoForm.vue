@@ -1,23 +1,36 @@
 <template>
-    <form @submit.prevent="() => { todos.addTodo(text); text = '' }">
+    <form @submit.prevent="addTodo()">
         <div class="input-group">
-            <input type="text" class="form-control" placeholder="New todo..." aria-label="New todo..." aria-describedby="button-addon" v-model="text" required>
-            <button class="btn btn-secondary" type="submit" id="button-addon">Add</button>
+            <input type="text" class="form-control" placeholder="Add a new todo..." aria-label="New todo..." aria-describedby="button-addon" v-model="text" required>
+            <button class="btn btn-secondary" type="submit" id="button-addon">
+                <i class="fa-solid fa-circle-plus"></i>
+            </button>
         </div>
-	</form>            
+	</form>
 </template>
 
-<script setup>
-import { useTodosStore } from '@/stores/todos'
-const todos = useTodosStore();
-</script>
-
 <script>
+import { useTodosStore } from '@/stores/todos'
+
 export default{
 	data(){
-		return { 
+		return {
 			text: ''
 		}
 	},
+
+    methods: {
+        addTodo(){
+            this.todos.addTodo(this.text);
+            this.text = '';
+        }
+    },
+
+    setup(){
+        const todos = useTodosStore();
+        return {
+            todos
+        }
+    }
 }
 </script>

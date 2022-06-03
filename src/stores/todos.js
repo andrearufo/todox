@@ -16,6 +16,8 @@ export const useTodosStore = defineStore({
 
     actions: {
         addTodo(text) {
+            console.log('Adding:', text);
+
             return this.list.push({
                 body: text,
                 is_complete: false

@@ -7,7 +7,7 @@
             <div class="row align-items-center">
                 <div class="col">
 
-                    <h1>Todox</h1>
+                    <h1>Todo<sup>x</sup></h1>
 
                 </div>
                 <div class="col-auto">

@@ -9,3 +9,10 @@ app.use(createPinia())
 app.use(autoAnimatePlugin)
 
 app.mount('#app')
+
+import { registerSW } from 'virtual:pwa-register'
+
+const updateSW = registerSW({
+    onNeedRefresh() { },
+    onOfflineReady() { },
+})
