@@ -10,7 +10,7 @@
 			}"
 			>
 
-				<div class="row align-items-center">
+				<div class="row">
 					<div class="col">
 
 						<div class="form-check">
@@ -46,7 +46,15 @@
 	</div>
 </template>
 
-<script setup>
+<script>
 import { useTodosStore } from '@/stores/todos'
-const todos = useTodosStore();
+
+export default{
+    setup(){
+        const todos = useTodosStore();
+        return {
+            todos
+        }
+    }
+}
 </script>

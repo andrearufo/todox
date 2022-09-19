@@ -27,6 +27,7 @@
                 <div class="col-lg">
 
                     <TodoForm/>
+
                 </div>
                 <div class="col-lg-auto">
 
@@ -39,12 +40,26 @@
     </section>
 </template>
 
-<script setup>
+<script>
 import TodoCounter from '@/components/TodoCounter.vue';
 import TodoList from '@/components/TodoList.vue';
 import TodoForm from '@/components/TodoForm.vue';
 import TodoUtility from '@/components/TodoUtility.vue';
+import { useTodosStore } from '@/stores/todos'
 
-import { useTodosStore } from '@/stores/todos';
-const todos = useTodosStore();
+export default{
+    components: {
+        TodoCounter,
+        TodoList,
+        TodoForm,
+        TodoUtility
+    },
+
+    setup(){
+        const todos = useTodosStore();
+        return {
+            todos
+        }
+    }
+}
 </script>

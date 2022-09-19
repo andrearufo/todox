@@ -17,7 +17,15 @@
     </div>
 </template>
 
-<script setup>
+<script>
 import { useTodosStore } from '@/stores/todos'
-const todos = useTodosStore();
+
+export default{
+    setup(){
+        const todos = useTodosStore();
+        return {
+            todos
+        }
+    }
+}
 </script>
